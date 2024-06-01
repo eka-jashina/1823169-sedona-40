@@ -2,6 +2,7 @@
 
 * Студент: [Екатерина Яшина](https://up.htmlacademy.ru/htmlcss/40/user/1823169).
 * Наставник: [Николай Колганов](https://htmlacademy.ru/profile/id794007).
+* Сайт: [Седона](https://htmlacademy-htmlcss.github.io/1823169-sedona-40/master/)
 
 ---
 

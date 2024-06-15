@@ -1,0 +1,270 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: local("PT Sans"),
+       url("../fonts/ptsans-400.woff2") format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: local("PT Sans"),
+       url("../fonts/ptsans-700.woff2") format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --text-main-dark-color: #333333;
+  --text-main-light-color: #FFFFFF;
+  --text-nav-color: #000000;
+  --text-title-color: #000000;
+  --button-text-color: #FFFFFF;
+  --button-bg-basic-color: #756157;
+  --button-bg-second-color: #82B3D3;
+  --section-bg-safety-color: #756157;
+  --favorite-bg-color: #7DB54F;
+  --input-bg-color: #F2F2F2;
+  --input-text-color: #000000;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--text-main-dark-color);
+}
+
+/* general classes */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--button-text-color);
+  text-transform: uppercase;
+  background-color: var(--button-bg-basic-color);
+}
+
+.main-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.section-text {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.section-accent-text {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.form__input {
+  line-height: 24px;
+  color: var(--input-text-color);
+  background-color: var(--input-bg-color);
+}
+
+.form__button {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: var(--button-bg-second-color);
+}
+
+/* header */
+
+.nav__link {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--text-nav-color);
+}
+
+.favorites__amount {
+  font-size: 10px;
+  line-height: 10px;
+  color: var(--text-main-light-color);
+  background-color: var(--favorite-bg-color);
+}
+
+/* advantages, comfort */
+
+.advantage-1,
+.advantage-5 {
+  color: var(--text-main-light-color);
+  background-color: #82B3D3;
+}
+
+.advantage__title,
+.comfort__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--text-title-color);
+}
+
+.advantage-1 .advantage__title,
+.advantage-5 .advantage__title {
+  color: var(--text-main-light-color);
+}
+
+.advantage-2,
+.advantage-4,
+.comfort-item-1,
+.comfort-item-3 {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantage-3 {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+/* booking */
+
+.booking__search {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* subscribe-index */
+
+.subscribe-index__container {
+  color: var(--text-main-light-color);
+  background-color: var(--section-bg-safety-color);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-image: url('../images/decor/index-subscribe-bg.jpg');
+}
+
+/* choice */
+
+.choice {
+  color: var(--text-main-light-color);
+}
+
+.choice__container {
+  background-color: var(--section-bg-safety-color);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-image: url('../images/decor/catalog-choice-bg.jpg');
+}
+
+.form-group__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.form-group__item {
+  line-height: 23px;
+}
+
+.form-group__submit {
+  background-color: var(--button-bg-second-color);
+}
+
+.form-group__reset {
+  background-color: transparent;
+}
+
+/* result */
+
+.hotel__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--text-title-color);
+}
+
+.hotel__rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: #F2F2F2;
+}
+
+.hotel__favorite {
+  background-color: var(--button-bg-second-color);
+}
+
+.pagination__number {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.page__number,
+.page__hidden {
+  color: var(--text-nav-color);
+  background-color: #F2F2F2;
+}
+
+.page__number[href] {
+  color: var(--button-text-color);
+  background-color: var(--button-bg-second-color);
+}
+
+/* footer */
+
+.footer {
+  color: var(--text-nav-color);
+}
+
+.footer__tel {
+  font-size: 40px;
+  line-height: 40px;
+}

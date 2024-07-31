@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="container flex">
-    <header class="header flex">
+    <header class="header flex" data-test="header">
       <a class="header__logo logo" href="index.html">
           <img class="logo__img" src="images/content/logo-sedona.png" width="140" height="70" alt="Герб Седоны: коричневые скалы на фоне голубого неба">
       </a>
@@ -43,7 +43,7 @@
         <a class="user__order button link effects-basic-color" href="#">Хочу сюда!</a>
       </div>
     </header>
-    <main class="main">
+    <main class="main" data-test="main">
       <section class="choice section">
         <h1 class="choice__title main-title">Гостиницы Седоны</h1>
         <ul class="choice__breadcrumbs breadcrumbs list-reset flex">
@@ -60,7 +60,7 @@
             <a class="breadcrumbs__link link">Гостиницы</a>
           </li>
         </ul>
-        <form class="choice__form form flex" method="post" action="https://echo.htmlacademy.ru/">
+        <form class="choice__form form flex" data-test="filter" method="post" action="https://echo.htmlacademy.ru/">
           <div class="form__container flex">
             <fieldset class="form__group form-group">
               <legend class="form-group__title">Инфраструктура:</legend>
@@ -129,7 +129,7 @@
           </div>
         </form>
       </section>
-      <section class="result section">
+      <section class="result section" data-test="catalog">
         <div class="result__head result-head flex">
           <h2 class="result-head__title section-title">Найдено гостиниц: <span>38</span></h2>
           <div class="result-head__nav result-nav flex">
@@ -139,7 +139,7 @@
             </select>
             <ul class="result-nav__view view list-reset flex" aria-label="Выбор формата отображения результатов поиска">
               <li class="view__item">
-                <a class="view__link link flex" href="catalog.html?view=tile">
+                <a class="view__link link view__link_active flex" href="catalog.html?view=tile">
                   <img class="link__icon" src="images/content/icon-sorting-tile.svg" width="16" height="14" alt="Тип отображения: плитка">
                 </a>
               </li>
@@ -228,34 +228,34 @@
             <a class="page__number link flex">1</a>
           </li>
           <li class="pagination__page page">
-            <a class="page__number link flex effects-second-color" href="#">2</a>
+            <a class="page__number link flex" href="#">2</a>
           </li>
           <li class="pagination__page page">
-            <a class="page__number link flex effects-second-color" href="#">3</a>
+            <a class="page__number link flex" href="#">3</a>
           </li>
           <li class="pagination__page page">
-            <a class="page__number link flex effects-second-color" href="#">4</a>
+            <a class="page__number link flex" href="#">4</a>
           </li>
           <li class="pagination__page page">
             <span class="page__hidden flex">...</span>
           </li>
           <li class="pagination__page page">
-            <a class="page__number link flex effects-second-color" href="#">10</a>
+            <a class="page__number link flex" href="#">10</a>
           </li>
         </ol>
       </section>
-      <section class="subscribe section flex">
+      <section class="subscribe section flex" data-test="subscribe">
         <h2 class="subscribe__title section-title visually-hidden">Рассылка</h2>
         <p class="subscribe__accent-text section-text section-accent-text">Подпишитесь на рассылку</p>
         <p class="subscribe__text section-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe__form form flex" method="post" action="https://echo.htmlacademy.ru/">
           <label class="form__label visually-hidden" for="email">Введите Ваш e-mail</label>
-          <input class="form__input" id="email" type="email" placeholder="Ваш e-mail" required>
-          <button class="form__button button button-reset effects-second-color" type="submit">Подписаться</button>
+          <input class="form__input input subscribe-input" id="email" type="email" placeholder="Ваш e-mail" required>
+          <button class="form__button subscribe-button button button-reset effects-second-color" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
-    <footer class="footer flex">
+    <footer class="footer flex" data-test="footer">
       <ul class="footer__socials socials list-reset flex">
         <li class="socials__item flex">
           <a class="socials__link link" href="https://vk.com/htmlacademy">

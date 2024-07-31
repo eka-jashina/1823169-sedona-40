@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="container flex">
-    <header class="header flex">
+    <header class="header flex" data-test="header">
       <a class="header__logo logo" href="index.html">
           <img class="logo__img" src="images/content/logo-sedona.png" width="140" height="70" alt="Герб Седоны: коричневые скалы на фоне голубого неба">
       </a>
@@ -43,12 +43,12 @@
         <a class="user__order button link effects-basic-color" href="#">Хочу сюда!</a>
       </div>
     </header>
-    <main class="main">
-      <section class="hero section flex">
+    <main class="main" data-test="main">
+      <section class="hero section flex" data-test="hero">
         <h1 class="hero__title main-title visually-hidden">Курортный городок Седона</h1>
         <img class="hero__img" src="images/content/index-hero-img.jpg" width="1200" height="485" alt="Приветственная надпись на фоне горного пейзажа">
       </section>
-      <section class="advantages section flex">
+      <section class="advantages section flex" data-test="advantages">
         <h2 class="advantages__title section-title visually-hidden">Преимущества</h2>
         <p class="advantages__accent-text section-text section-accent-text">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="advantages__text section-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -87,7 +87,7 @@
           </li>
         </ul>
       </section>
-      <section class="comfort section flex">
+      <section class="comfort section flex" data-test="service">
         <h2 class="comfort__title section-title visually-hidden">Удобства</h2>
         <p class="comfort__accent-text section-text section-accent-text">Приезжайте в&nbsp;Седону отдохнуть в&nbsp;комфорте и&nbsp;уюте!</p>
         <p class="comfort__text section-text">Опытный персонал и качественное обслуживание!</p>
@@ -106,24 +106,24 @@
           </li>
         </ul>
       </section>
-      <section class="booking section flex">
+      <section class="booking section flex" data-test="search">
         <h2 class="booking__title section-title visually-hidden">Бронирование</h2>
         <p class="booking__accent-text section-text section-accent-text">Заинтересовались?</p>
         <p class="booking__text section-text">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;Седоне</p>
         <button class="booking__search button button-reset effects-basic-color">Поиск гостиницы в Седоне</button>
       </section>
-      <section class="subscribe subscribe-index section flex">
+      <section class="subscribe subscribe-index section flex" data-test="subscribe">
         <h2 class="subscribe__title section-title visually-hidden">Рассылка</h2>
         <p class="subscribe__accent-text section-text section-accent-text">Подпишитесь на рассылку</p>
         <p class="subscribe__text section-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe__form form flex" method="post" action="https://echo.htmlacademy.ru/">
           <label class="form__label visually-hidden" for="email">Введите Ваш e-mail</label>
-          <input class="form__input" id="email" type="email" placeholder="Ваш e-mail" required>
-          <button class="form__button button button-reset effects-second-color" type="submit">Подписаться</button>
+          <input class="form__input input subscribe-input" id="email" type="email" placeholder="Ваш e-mail" required>
+          <button class="form__button subscribe-button button button-reset effects-second-color" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
-    <footer class="footer flex">
+    <footer class="footer flex" data-test="footer">
       <ul class="footer__socials socials list-reset flex">
         <li class="socials__item flex">
           <a class="socials__link link" href="https://vk.com/htmlacademy">
@@ -168,6 +168,80 @@
         </svg>
       </a>
     </footer>
+  </div>
+  <div class="modal"> <!-- modal-shown - показать окно -->
+    <section class="modal__container">
+      <h1 class="modal__title section-title">Поиск гостиницы в Седоне</h1>
+      <form class="modal__form search-form flex" method="get" action="https://echo.htmlacademy.ru/">
+        <div class="search-form__date date flex">
+          <label class="date__title" for="check-in">Дата заезда:</label>
+          <input class="date__input input" type="text" name="check-in" id="check-in" placeholder="Укажите дату" value="27 апреля 2020">
+          <span class="date__availability date__availability_error">Мы не можем отправить вас в прошлое.</span>
+        </div>
+        <div class="search-form__date date flex">
+          <label class="date__title" for="check-out">Дата выезда:</label>
+          <input class="date__input input" type="text" name="check-out" id="check-out" placeholder="Укажите дату" value="1 сентября 2023">
+          <span class="date__availability">На эти даты есть свободные номера. Пока есть.</span>
+        </div>
+        <div class="search-form__tourists tourists flex">
+          <div class="tourists__category tourists-category flex">
+            <div class="tourists-category__title flex">Взрослые:</div>
+            <div class="tourists-category__controlling controlling flex">
+              <button class="controlling__button controlling-button button-reset flex" type="button">
+                <span class="controlling-button__text visually-hidden">Уменьшить количество</span>
+                <svg class="controlling-button__icon" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3"/>
+                </svg>
+              </button>
+              <input class="controlling__count input" type="text" name="adults" value="2">
+              <button class="controlling__button controlling-button button-reset flex" type="button">
+                <span class="controlling-button__text visually-hidden">Увеличить количество</span>
+                <svg class="controlling-button__icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3"/>
+                  </svg>
+              </button>
+            </div>
+          </div>
+          <div class="tourists__category tourists-category flex">
+            <div class="tourists-category__title category-title flex">
+              <span class="category-title__text">Дети:</span>
+              <span class="category-title__tooltip tooltip">
+                <button class="tooltip__button tooltip-button button-reset flex" type="button" aria-labelledby="tooltip-children">
+                  <span class="tooltip-button__text visually-hidden">Открыть подсказку</span>
+                  <svg class="tooltip-button__icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
+                  </svg>
+                </button>
+                <span class="tooltip__text" id="tooltip-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+            </div>
+            <div class="tourists-category__controlling controlling flex">
+              <button class="controlling__button controlling-button button-reset flex" type="button">
+                <span class="controlling-button__text visually-hidden">Уменьшить количество</span>
+                <svg class="controlling-button__icon" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3"/>
+                </svg>
+              </button>
+              <input class="controlling__count input" type="text" name="children" value="2">
+              <button class="controlling__button controlling-button button-reset flex" type="button">
+                <span class="controlling-button__text visually-hidden">Увеличить количество</span>
+                <svg class="controlling-button__icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3"/>
+                  </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="search-form__submit button button-reset effects-second-color" type="submit">Найти</button>
+      </form>
+      <button class="modal__close close button-reset flex" type="button">
+        <span class="close__text visually-hidden">Закрыть</span>
+        <svg class="close__icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z" fill="black"/>
+        </svg>
+      </button>
+    </section>
   </div>
 </body>
 </html>

@@ -723,7 +723,16 @@ body {
   color: var(--input-text-color);
 
   background-color: var(--input-bg-color);
-  border-radius: var(--border-radius);
+}
+
+.price-option-min {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.price-option-max {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
 
 .price-option:hover {
@@ -1232,6 +1241,7 @@ body {
   justify-content: center;
   align-items: center;
 
+  border-radius: var(--border-radius);
   cursor: pointer;
 
   transition: outline 0.3s ease-in-out;
